@@ -6,7 +6,9 @@ We were asked to create a macro that would analyze a dataset of stocks for clean
 
 ## Results
 
-When I ran the Macro to analyze the stocks, it was obvious that 2017 was a much better year to invest in stocks than 2018. The only two stocks that had consistent gains through both years were **ENPH** and **RUN**. As for the code, when it was first created took around .7 seconds to analyze a dataset.
+When I ran the Macro to analyze the stocks, it was obvious that 2017 was a much better year to invest in stocks than 2018. The only two stocks that had consistent gains through both years were **ENPH** and **RUN**. 
+As for the code, when it was first created took around .7 seconds to analyze a dataset.
+
 ![Screen Shot 2021-07-17 at 6 41 53 PM](https://user-images.githubusercontent.com/83510059/126054008-a8197502-8dd9-4206-941a-855f19ff7ce9.png)
 ![Screen Shot 2021-07-17 at 6 42 17 PM](https://user-images.githubusercontent.com/83510059/126054011-ce68d293-ca9d-4d18-aea8-c9d15f60be68.png)
 
