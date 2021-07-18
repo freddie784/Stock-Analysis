@@ -6,7 +6,14 @@ We were asked to create a macro that would analyze a dataset of stocks for clean
 
 ## Results
 
-When I ran the Macro to analyze the stocks, it was obvious that 2017 was a much better year to invest in stocks than 2018. The only two stocks that had consistent gains through both years were **ENPH** and **RUN**. As for the code, when it was first created took around .7 seconds to analyze a dataset. ***insert Picture*** This code was inefficient because there were three *for* loops each analyzing a different column on the **SAME** worksheet. Each column has 3012 rows of data which meant that after all three loops were done 9036 rows were analyzed. In the refactored code we created **one** loop that checked all **three** columns for the data we were looking for; therefore, cutting the amount of rows to loop through by *66%*. This refactor cut the code's time to execute by about 6 seconds ***See Below*** ***Insert Pic***
+When I ran the Macro to analyze the stocks, it was obvious that 2017 was a much better year to invest in stocks than 2018. The only two stocks that had consistent gains through both years were **ENPH** and **RUN**. As for the code, when it was first created took around .7 seconds to analyze a dataset.
+![Screen Shot 2021-07-17 at 6 41 53 PM](https://user-images.githubusercontent.com/83510059/126054008-a8197502-8dd9-4206-941a-855f19ff7ce9.png)
+![Screen Shot 2021-07-17 at 6 42 17 PM](https://user-images.githubusercontent.com/83510059/126054011-ce68d293-ca9d-4d18-aea8-c9d15f60be68.png)
+
+
+This code was inefficient because there were three *for* loops each analyzing a different column on the **SAME** worksheet. Each column has 3012 rows of data which meant that after all three loops were done 9036 rows were analyzed. In the refactored code we created **one** loop that checked all **three** columns for the data we were looking for; therefore, cutting the amount of rows to loop through by *66%*. This refactor cut the code's time to execute by about 6 seconds ***See Below***
+![VBA_Challenge_2017](https://user-images.githubusercontent.com/83510059/126054019-a5384221-9733-4a16-aa2e-687eb9e31840.png)
+![VBA_Challenge_2018](https://user-images.githubusercontent.com/83510059/126054028-28b664e6-3694-4af9-8156-374ed8eca980.png)
 
 ## Summary
 
