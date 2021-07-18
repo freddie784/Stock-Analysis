@@ -6,7 +6,33 @@ We were asked to create a macro that would analyze a dataset of stocks for clean
 
 ## Results
 
-When I ran the Macro to analyze the stocks, it was obvious that 2017 was a much better year to invest in stocks than 2018. The only two stocks that had consistent gains through both years were **ENPH** and **RUN**. As for the code, when it was first created took around .7 seconds to analyze a dataset. ***insert Picture*** This code was inefficient because there were three *for* loops each analyzing a different column on the **SAME** worksheet. Each column has 3012 rows of data which meant that after all three loops were done 9036 rows were analyzed. In the refactored code we created **one** loop that checked all **three** columns for the data we were looking for; therefore, cutting the amount of rows to loop through by *66%*. This refactor cut the code's time to execute by about 6 seconds ***See Below*** ***Insert Pic***
+When I ran the Macro to analyze the stocks, it was obvious that 2017 was a much better year to invest in stocks than 2018. The only two stocks that had consistent gains through both years were **ENPH** and **RUN**. 
+
+As for the code, when it was first created took around .7 seconds to analyze a dataset.
+
+![Screen Shot 2021-07-17 at 6 41 53 PM](https://user-images.githubusercontent.com/83510059/126054008-a8197502-8dd9-4206-941a-855f19ff7ce9.png)
+![Screen Shot 2021-07-17 at 6 42 17 PM](https://user-images.githubusercontent.com/83510059/126054011-ce68d293-ca9d-4d18-aea8-c9d15f60be68.png)
+
+
+This code was inefficient because it would check every row before moving on to the next ticker and adding the data to our results page. Each column has 3012 rows of data which meant that after the loop had finished running a total of 36,144 rows were analyzed. In the refactored code the loop went through the rows once for the data we were looking for; therefore, cutting the amount of rows to loop through by *92%*. This refactor cut the code's time to execute by about 6 seconds ***See Below***
+
+
+![VBA_Challenge_2017](https://user-images.githubusercontent.com/83510059/126054019-a5384221-9733-4a16-aa2e-687eb9e31840.png)
+![VBA_Challenge_2018](https://user-images.githubusercontent.com/83510059/126054028-28b664e6-3694-4af9-8156-374ed8eca980.png)
+
+The first code contained a nested *for* that counted the tickers equal to t 
+>       For t = 0 To 11
+>       
+>           ticker = tickers(t)
+
+so all the rows had to be checked before moving on to the next ticker. However, in the refactored code we made a tickerindex and equaled it to 0 ***"ticker index = 0"*** after that in the code it was checked to see if the it was the last instance of the ticker and if it was then we would move on to the next ticker without needing to go back to the first row and instead simply moving on to the next row.
+
+>       If Cells(i, 1).Value = tickers(tickerindex) And Cells(i + 1, 1).Value <> tickers(tickerindex) Then 'enter endingprice
+>            tickerEndingPrices(tickerindex) = Cells(i, 6).Value
+>           'Increase the tickerIndex.
+>          tickerindex = tickerindex + 1
+>       End if
+>       next i
 
 ## Summary
 
